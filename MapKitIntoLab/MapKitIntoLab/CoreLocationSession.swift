@@ -45,16 +45,17 @@ class CoreLocationSession: NSObject {
         }
     }
     
-    public func convertPlaceNameToCoordinate(addressString: String) {
-        CLGeocoder().geocodeAddressString(addressString) { (placemarks, error) in
-            if let error = error {
-                print("geocodeAddressString error \(error) ")
-            }
-            if let firstPlaceMark = placemarks?.first,
-                let location = firstPlaceMark.location {
-                print("coordinate is \(location.coordinate)")
-            }
+      public func convertPlaceNameToCoordinate(addressString: String, completion: @escaping (Result<CLLocationCoordinate2D, Error>) -> ()) {
+          
+      CLGeocoder().geocodeAddressString(addressString) { (placemarks, error) in
+        if let error = error {
+          completion(.failure(error))
         }
+        if let firstPlacemark = placemarks?.first,
+          let location = firstPlacemark.location {
+          completion(.success(location.coordinate))
+        }
+      }
     }
     
     private func startMonitoringRegion(for school: School? = nil) {

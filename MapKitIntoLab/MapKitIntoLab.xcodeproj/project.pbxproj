@@ -18,6 +18,7 @@
 		C6112FEF2404106000A97363 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6112FEE2404106000A97363 /* School.swift */; };
 		C6112FF12404154300A97363 /* CoreLocationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6112FF02404154300A97363 /* CoreLocationSession.swift */; };
 		C6112FF3240418B600A97363 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6112FF2240418B600A97363 /* ShowAlert.swift */; };
+		C6AF4EA924056424001E5D14 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF4EA824056424001E5D14 /* LocationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C6112FEE2404106000A97363 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		C6112FF02404154300A97363 /* CoreLocationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationSession.swift; sourceTree = "<group>"; };
 		C6112FF2240418B600A97363 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		C6AF4EA824056424001E5D14 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				C6112FEC2404105700A97363 /* SchoolAPIClient.swift */,
 				C6112FF02404154300A97363 /* CoreLocationSession.swift */,
 				C6112FD924040F9300A97363 /* ViewController.swift */,
+				C6AF4EA824056424001E5D14 /* LocationDetailViewController.swift */,
 				C6112FDB24040F9300A97363 /* Main.storyboard */,
 				C6112FDE24040F9400A97363 /* Assets.xcassets */,
 				C6112FE024040F9400A97363 /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6AF4EA924056424001E5D14 /* LocationDetailViewController.swift in Sources */,
 				C6112FDA24040F9300A97363 /* ViewController.swift in Sources */,
 				C6112FED2404105700A97363 /* SchoolAPIClient.swift in Sources */,
 				C6112FF12404154300A97363 /* CoreLocationSession.swift in Sources */,
