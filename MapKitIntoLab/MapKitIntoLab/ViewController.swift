@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMapView()
+        //loadMapView()
         loadSchools()
         mapView.showsUserLocation = true
         searchBar.delegate = self
@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             case .success(let schools):
                 DispatchQueue.main.async {
                     self.schools = schools
+                    self.loadMapView()
                 }
             }
         }
@@ -68,11 +69,7 @@ class ViewController: UIViewController {
     private func loadMapView() {
         let annotations = makeAnnotations()
         mapView.addAnnotations(annotations)
-        //mapView.showAnnotations(annotations, animated: true)
-    }
-    private func convertCoordinateToPlacemark(for school: School) {
-        let location = coordinates(lat: school.latitude, long: school.longitude)
-        locationSession.convertCoordinateToPlacemark(coordinate: location)
+        mapView.showAnnotations(annotations, animated: true)
     }
     
     private func convertPlaceNameToCoordinate(for searchQuery: String) {
@@ -116,7 +113,6 @@ extension ViewController: MKMapViewDelegate {
         }) else {
             fatalError("could not access LocationDetailViewController")
         }
-        detailVC.modalPresentationStyle = .overCurrentContext
         present(detailVC, animated: true)
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

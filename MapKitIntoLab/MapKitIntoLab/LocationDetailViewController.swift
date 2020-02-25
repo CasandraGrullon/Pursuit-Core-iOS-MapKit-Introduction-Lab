@@ -28,13 +28,13 @@ class LocationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateUI()
     }
     
 
     private func updateUI() {
         schoolNameLabel.text = school.schoolName
-        addressLabel.text = "\(school.primaryAddressLine) \n\(school.borough) \n\(school.city), \(school.state)"
+        addressLabel.text = "\(school.primaryAddressLine) \n\(school.city), \(school.state)"
         overViewLabel.text = school.overview
     }
 
